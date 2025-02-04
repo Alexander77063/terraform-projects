@@ -72,3 +72,10 @@ variable "database_instance_identifier" {
  description    = "create a stanby db instance"
  type           = bool
 }
+
+# application load balancer veriables
+ variable "ssl_certificate_arn" {
+ default        =  "arn:aws:acm:us-east-1:314146301841:certificate/1a1f97f1-9919-4733-8065-16a91eb504ed"
+ description    = "ssl certificate arn"
+ type           = string
+}
