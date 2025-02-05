@@ -79,3 +79,10 @@ variable "database_instance_identifier" {
  description    = "ssl certificate arn"
  type           = string
 }
+
+# sns topic variables
+ variable "operator_email" {
+ default        =  "alex_77063@yahoo.com"
+ description    = "a valid email address
+ type           = string
+}
