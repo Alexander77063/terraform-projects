@@ -65,24 +65,60 @@ variable "database_instance_identifier" {
  description    = "database instance identifier"
  type           = string
 }
-
-
- variable "multi_az_deployment" {
+variable "multi_az_deployment" {
  default        =  false
  description    = "create a stanby db instance"
  type           = bool
 }
 
 # application load balancer veriables
- variable "ssl_certificate_arn" {
+variable "ssl_certificate_arn" {
  default        =  "arn:aws:acm:us-east-1:314146301841:certificate/1a1f97f1-9919-4733-8065-16a91eb504ed"
- description    = "ssl certificate arn"
+ description    =  "ssl certificate arn"
  type           = string
 }
 
 # sns topic variables
- variable "operator_email" {
+variable "operator_email" {
  default        =  "alex_77063@yahoo.com"
- description    = "a valid email address
- type           = string
+ description    =  "a valid email address"
+ type           =   string
+}
+
+# auto scaling group variables
+variable "launch_templte_name" {
+ default        =  "dev-launch-template"
+ description    =  "name of"
+ type           =   string
+}
+
+variable "ec2_image_id"{
+ default        =  "ami-0bea1425168e811e1"
+ description    =  "id of the ami"
+ type           =   string
+}
+
+variable "ec2_intance_type"{
+ default        =  "t2.micro"
+ description    =  "the ec2 instance type"
+ type           =   string
+}
+
+variable "ec2_key_pair_name"{
+ default        =  "my-ec2key"
+ description    =  "name of the ec2 key pair"
+ type           =   string
+}
+
+#route53 variables
+variable "domain_name"{
+ default        =  "alexander77063.co.uk"
+ description    =  "domain name"
+ type           =   string
+}
+
+variable "record_name"{
+ default        =  "www"
+ description    =  "sub domain name"
+ type           =   string
 }
